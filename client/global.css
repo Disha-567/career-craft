@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * NeoCareer Theme - Dark Radiant Colors
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 197 100% 50%;
+    --primary-foreground: 222.2 84% 4.9%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 282 85% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 197 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 197 100% 50%;
+    --sidebar-primary-foreground: 222.2 84% 4.9%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 197 100% 50%;
+    
+    /* NeoCareer brand colors - Dark radiant theme */
+    --brand-50: 197 100% 95%;
+    --brand-100: 197 100% 90%;
+    --brand-200: 197 100% 80%;
+    --brand-300: 197 100% 70%;
+    --brand-400: 197 100% 60%;
+    --brand-500: 197 100% 50%;
+    --brand-600: 197 100% 45%;
+    --brand-700: 197 100% 40%;
+    --brand-800: 197 100% 35%;
+    --brand-900: 197 100% 30%;
+    --brand-950: 197 100% 25%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 197 100% 50%;
+    --primary-foreground: 222.2 84% 4.9%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 282 85% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 197 100% 50%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 197 100% 50%;
+    --sidebar-primary-foreground: 222.2 84% 4.9%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 197 100% 50%;
+    
+    /* Brand colors for dark mode */
+    --brand-50: 197 100% 25%;
+    --brand-100: 197 100% 30%;
+    --brand-200: 197 100% 35%;
+    --brand-300: 197 100% 40%;
+    --brand-400: 197 100% 45%;
+    --brand-500: 197 100% 50%;
+    --brand-600: 197 100% 60%;
+    --brand-700: 197 100% 70%;
+    --brand-800: 197 100% 80%;
+    --brand-900: 197 100% 90%;
+    --brand-950: 197 100% 95%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-brand {
+    @apply bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500;
+  }
+  
+  .bg-glass {
+    @apply bg-black/20 backdrop-blur-lg border border-white/20;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), 0 0 60px rgba(168, 85, 247, 0.3), 0 0 90px rgba(236, 72, 153, 0.2);
+  }
+  
+  .shadow-glow-strong {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.6), 0 0 80px rgba(168, 85, 247, 0.5), 0 0 120px rgba(236, 72, 153, 0.4);
+  }
+}
