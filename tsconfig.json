@@ -33,6 +33,7 @@
     }
   },
   "include": [
+    "src/**/*",
     "client/**/*",
     "server/**/*",
     "shared/**/*",

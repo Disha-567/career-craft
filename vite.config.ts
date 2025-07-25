@@ -3,16 +3,17 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { createServer } from "./server";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  root: ".",
   server: {
     host: "::",
     port: 8080,
   },
   build: {
     outDir: "dist/spa",
+    sourcemap: true
   },
-  plugins: [react(), expressPlugin()],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
